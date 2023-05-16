@@ -1,0 +1,26 @@
+{
+  "name": "fhir-openai-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "modulie",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.1.5",
+    "@types/swagger-ui-express": "^4.1.3",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
+    "tsoa": "^5.1.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "swagger-ui-express": "^4.6.3"
+  }
+}

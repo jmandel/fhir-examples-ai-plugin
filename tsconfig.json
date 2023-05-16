@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "experimentalDecorators": true
+  }
+}
