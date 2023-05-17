@@ -2,14 +2,14 @@
     "schema_version": "v1",
     "name_for_human": "FHIR API Helper Plugin",
     "name_for_model": "fhir_helper",
-    "description_for_human": "Plugin for assisting with FHIR API example. You can fetch full definitions for a FHIR resource and validate resources.",
-    "description_for_model": "Plugin for assisting with FHIR API development. You can fetch full definitions for a FHIR resource and validate a FHIR resource.",
+    "description_for_human": "Plugin for assisting with FHIR API example. You can refine example FHIR resources to make them valid.",
+    "description_for_model": "Plugin for assisting with FHIR API development. You can refine example FHIR resources to make them valid.",
     "auth": {
         "type": "none"
     },
     "api": {
         "type": "openapi",
-        "url": "http://localhost:4444/openapi.yaml",
+        "url": "http://localhost:4444/.well-known/openapi.yaml",
         "is_user_authenticated": false
     },
     "logo_url": "http://localhost:4444/logo.png",

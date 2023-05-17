@@ -1,0 +1,78 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "fhir-openai-plugin",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/fhir/refine": {
+      "post": {
+        "operationId": "RefineExampleResource",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "description": {
+                    "type": "string"
+                  },
+                  "resource": {
+                    "type": "object",
+                    "properties": {
+                      "resourceType": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "resourceType"
+                    ]
+                  }
+                },
+                "required": [
+                  "description",
+                  "resource"
+                ]
+              },
+              "examples": [
+                {
+                  "description": "// english description of what this resources is intended to mean",
+                  "resource": {
+                    "resourceType": "// FHIR resource with draft content to be refined"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "instructions": {
+                      "type": "string"
+                    },
+                    "refinedOutput": {
+                      "type": "string"
+                    },
+                    "vocabulary": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "refinedOutput"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
